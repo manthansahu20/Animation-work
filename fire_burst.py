@@ -1,16 +1,19 @@
 import turtle
 import random
 
-turtle.bgcolor("black")
+# Create screen and set background color
+screen = turtle.Screen()
+screen.bgcolor("black")
+
 t = turtle.Turtle()
 t.speed(0)
-turtle.colormode(255)
 
-colors = [(255,0,0),(255,255,0),(0,255,0),(0,255,255),(0,0,255),(255,0,255)]
+# Use color names instead of RGB tuples
+colors = ["red", "yellow", "green", "cyan", "blue", "magenta"]
 
 for i in range(36):
     t.penup()
-    t.goto(0,0)
+    t.goto(0, 0)
     t.pendown()
     t.pencolor(random.choice(colors))
     t.forward(100)
